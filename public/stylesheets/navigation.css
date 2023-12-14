@@ -1,0 +1,91 @@
+/* Style for Navigation Container */
+@media  screen and  (max-width: 460px){
+    .navigation-container{
+        width: 50% !important;
+        margin: 25px auto;
+    }
+}
+.navigation-container {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+/* Style for Logo Container */
+.logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+}
+
+/* Responsive styles for Logo Container */
+@media screen and (max-width: 800px) {
+    .logo-container {
+        width: 50px;
+        padding: 0px;
+    }
+}
+
+/* Style for Nav Links Container */
+.nav-links-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Responsive styles for Nav Links Container */
+@media screen and (max-width: 800px) {
+    .nav-links-container {
+        width: 80%;
+    }
+}
+
+/* Style for Nav Links */
+.nav-link {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #111417;
+}
+.navigation-link{
+    text-decoration: none;
+}
+.navigation-link:visited{
+    color: #111417;
+}
+.profile-link{
+    font-size: 20px;
+    color: #111417;
+    transition: all .1s linear;
+}
+.profile-link:hover{
+    color: green;
+}
+/* Cart Icon Container */
+.CartIconContainer {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Shopping Icon */
+.ShoppingIcon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Item Count */
+.ItemCount {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    bottom: 12px;
+}

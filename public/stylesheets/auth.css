@@ -1,0 +1,95 @@
+.auth-container{
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+/* Styles for SignUpContainer */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+.signup-container h2 {
+    margin: 10px 0;
+}
+
+/* Styles for ButtonContainer */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles for Form Input Label */
+.form-input-label {
+    color: grey;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+}
+
+.form-input-label-shrink {
+    top: -14px;
+    font-size: 12px;
+    color: black;
+}
+
+/* Styles for Input */
+input {
+    background-color: white;
+    color: grey;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid grey;
+    margin: 25px 0;
+    outline: none;
+}
+
+input:focus ~ .form-input-label,
+input[value]:not([value=""]) ~ .form-input-label {
+    top: -14px;
+    font-size: 12px;
+    color: black;
+}
+
+/* Styles for Group */
+.group {
+    position: relative;
+    margin: 45px 0;
+}
+
+.group input[type='password'] {
+    letter-spacing: 0.3em;
+}
+.signup-btn{
+    width: 70px;
+    width: auto;
+    height: 50px;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    padding: 0 35px 0 35px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', serif;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.signup-btn:hover{
+    color: #ff5555;
+}

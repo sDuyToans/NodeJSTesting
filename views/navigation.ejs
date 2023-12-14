@@ -1,0 +1,22 @@
+<div class="navigation-container" style="background: #fff">
+    <a href="/" class="logo-container navigation-link">
+        <img src="/images/img.png" alt="logo">
+    </a>
+    <div class="nav-links-container">
+        <a href="/map" class="nav-link navigation-link" >Map</a>
+<!--        <a href="/shop" class="nav-link navigation-link" >Shop</a>-->
+        <div class="CartIconContainer">
+            <img src="/images/shoppingbag.png" class="ShoppingIcon"/>
+            <span id="itemCount" class="ItemCount">0</span>
+        </div>
+        <% if (user) { %>
+            <p>Welcome, <b><a href="/profile" class="navigation-link profile-link"><%= user.username %></a></b></p>
+            <!-- User is logged in -->
+            <a href="/logout" class="nav-link navigation-link">Logout</a>
+        <% } else { %>
+            <!-- User is not logged in -->
+            <a href="/auth/login" class="nav-link navigation-link">Login</a>
+        <% } %>
+        <!-- Add more links as needed -->
+    </div>
+</div>

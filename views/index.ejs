@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/home.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/footer.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/navigation.css' />
+  </head>
+  <body>
+  <div class="max-width">
+    <% include ./navigation.ejs%>
+    <h1>Home</h1>
+    <div class="directory-container">
+      <% for (var i = 0; i < categories.length; i++) { %>
+        <div class="directory-item-container"  onclick="redirectFunc('<%= categories[i].route %>')">
+          <div class="background-image" style="background-image: url('<%= categories[i].imageUrl %>')"></div>
+          <div class="body-directory-item-container">
+            <h2><%= categories[i].title %></h2>
+            <p>Shop Now</p>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+    <% include ./footer.ejs %>
+  <script src="/javascripts/redirect.js"></script>
+  </body>
+</html>

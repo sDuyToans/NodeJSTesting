@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hats</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/productcard.css"/>
+    <link rel='stylesheet' type="text/css" href='/stylesheets/footer.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/navigation.css' />
+</head>
+<body>
+<div class="max-width">
+    <% include ./navigation.ejs%>
+    <div class="category-title">
+        Hats
+    </div>
+    <div class="category-container">
+        <% for (var i = 0; i < arrHats.length; i++) { %>
+            <div class="product-card-container">
+                <img src="<%= arrHats[i].imageURL %>" alt="<%= arrHats[i].productName %>">
+                <button class="base-button" onclick="addToCart(<%= arrHats[i].id %>, 'hats')">Add to Cart</button>
+                <div class="footer-product">
+                    <div class="name"><%= arrHats[i].productName %></div>
+                    <div class="price"><%= arrHats[i].price %></div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+<% include ./footer %>
+<script src="/javascripts/addToCart.js"></script>
+</body>
+</html>

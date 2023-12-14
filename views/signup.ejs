@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' type="text/css" href='/stylesheets/footer.css'/>
+    <link rel='stylesheet' type="text/css" href='/stylesheets/navigation.css'/>
+    <link rel='stylesheet' type="text/css" href='/stylesheets/auth.css'/>
+</head>
+<body style="background: url('/images/signupbg.png')">
+<div class="max-width">
+    <% include ./navigation.ejs %>
+    <div class="auth-container">
+        <div class="signup-container">
+            <h2>Don't have an account?</h2>
+            <span>Sign up with your email and password</span>
+            <form action="/auth/signup" method="post">
+                <div class="group">
+                    <input type="text" id="displayName" name="displayName" required>
+                    <label class="form-input-label" for="displayName">Display Name:</label>
+                </div>
+                <div class="group">
+                    <input type="email" id="email" name="email" required>
+                    <label class="form-input-label" for="email">Email:</label>
+                </div>
+                <div class="group">
+                    <input type="password" id="password" name="password" required>
+                    <label class="form-input-label" for="password">Password:</label>
+                </div>
+                <div class="group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <label class="form-input-label" for="confirmPassword">Confirm Password::</label>
+                </div>
+                <div style="display: flex; justify-content: space-between">
+                    <button class="base-button" type="submit">Sign Up</button>
+                    <a href="/auth/login" class="signup-btn">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include ./footer.ejs %>
+</body>
+</html>
